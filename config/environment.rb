@@ -1,5 +1,4 @@
 require 'sqlite3'
-VERSION = '1.4.0'
 
 DB = {:conn => SQLite3::Database.new("db/students.db")}
 DB[:conn].execute("DROP TABLE IF EXISTS students")
@@ -14,3 +13,4 @@ SQL
 
 DB[:conn].execute(sql)
 DB[:conn].results_as_hash = true
+
